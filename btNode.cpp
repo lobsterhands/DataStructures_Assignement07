@@ -46,23 +46,21 @@ void bst_insert(btNode*& bst_root, int insInt) {
    btNode *current = new btNode;
    btNode *parent = new btNode;
 
-   cout << "Data to insert: " << insInt << endl;
-
    if (bst_root == NULL) { // BST is empty; insert here
-      cout << "root empty" << endl;
 
       btNode *insert = new btNode;
       insert->data = insInt;
       insert->left = NULL;
       insert->right = NULL;
       bst_root = insert;
+
    } else { // Traverse BST to find insertion point
 
       current = bst_root;
 
       while (current != NULL) {
-         if (current->data == insInt) {
-            current->data = insInt;
+         if (current->data == insInt) { // If insInt is already in the list
+            current->data = insInt; // overwrite the value and return
             return;
          }
 
