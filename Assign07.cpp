@@ -14,7 +14,7 @@ bool remOne(int dataOriSorted[], int& used, int remInt);
 
 int main()
 {
-   int testCasesToDo = 1, //990000,
+   int testCasesToDo = 2, //990000,
        testCasesDone = 0,
        loOriSize = 1,
        hiOriSize = 30,
